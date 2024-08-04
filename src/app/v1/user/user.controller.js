@@ -31,7 +31,7 @@ export const signIn = async (req, res) => {
     maxAge: 24 * 60 * 60 * 1000,
     httpOnly: true,
     secure: true,
-    SameSite: "Lax"
+    SameSite: "None"
   };
 
   return res.cookie('token', token, tokenOptions).json({
